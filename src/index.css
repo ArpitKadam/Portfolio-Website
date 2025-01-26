@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+/* Enhanced hover effects */
+.hover-container {
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-container:hover {
+  transform: translateY(-4px);
+}
+
+.project-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 100, 102, 0.2);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #65fefc;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Enhanced button hover effects */
+.button-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.button-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(101, 254, 252, 0.2);
+}
